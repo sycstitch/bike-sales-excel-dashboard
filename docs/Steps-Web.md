@@ -54,4 +54,67 @@
 3. Double click the fill handle (the small square at the bottom-right corner of a selected cell) to auto-fill the rest of the column.
 ![alt text](/docs/assets/F-3.png)
 
-# PIVOT TABLES
+# PIVOT TABLES & VISUALIZATIONS
+- How visualizations are created
+
+1. Create new sheet called 'Pivot Table'.
+
+2. Select a cell. Go to Insert -> Pivot Table.
+
+3. Go to 'bike_buyers'. Ctrl-A to select entire table. Click OK.
+![alt text](/docs/assets/PT-setup-3.png)
+
+Should look something like this.
+![alt text](/docs/assets/PT-setup-3-2.png)
+
+## 1 - AVG Income
+### PIVOT TABLE
+1. Select Gender + Income
+
+2. PivotTable Fields -> Values -> Value Field Settings. Click 'Average'.
+![alt text](/docs/assets/PT-avg-income-1.png)
+![alt text](/docs/assets/PT-avg-income-2.png)
+
+3. Drag 'Purchased Bike' to Columns section.
+
+Finished Product:
+![alt text](/docs/assets/PT-avg-income-3.png) 
+
+### VISUALIZATION
+1. Click a row in the table. Insert Tab -> Bar graph (clustered column).
+![alt text](/docs/assets/Visual-avg-income-1.png)
+
+2. Double click to bring up 'Chart' bar.
+
+3. Turn on 'Axis Title' in both Horizontal and Vertical Axis.
+- Horizontal Axis Title: Gender
+- Vertical Axis Title: Income
+![alt text](/docs/assets/Visual-avg-income-2.png)
+
+4. Set Chart Title.
+- Avg Income Per Gender & Salary
+
+5. Add commas to table (looks nicer).
+- Select all rows with numbers.
+- Home Tab: Change from Number -> Accounting.
+- Decrease decimal places to 0.
+- Click off table to apply results to graph.
+![alt text](/docs/assets/Visual-avg-income-3.png)
+
+## 2 - Commute Distance
+![alt text](/docs/assets/Visual-commute-1.png)
+- Problem: formatting of '10+' miles doesn't match the others -> can't list distances in order
+- Temporary Fix: 
+ - Go to original sheet. Rename all instances of "10+ Miles" to "More Than 10 Miles". 
+ - Data Tab -> Refresh All
+
+![alt text](/docs/assets/Visual-commute-2.png)
+- Chart Type: Line with markers
+
+## 3 - Age Bracket
+![alt text](/docs/assets/Visual-age-1.png)
+
+![alt text](/docs/assets/Visual-age-2.png)
+- Chart Type: Line with markers
+
+# DASHBOARD
