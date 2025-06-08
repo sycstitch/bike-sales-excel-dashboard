@@ -1,122 +1,128 @@
 # Step-by-Step (Web Version)
 
+> **Note:** Due to Excel Web limitations (no slicers from charts, no copying pivot tables between sheets), this guide keeps *everything* on a single sheet: the **Dashboard**. Pivot tables will be hidden behind the visuals.
+
+---
+
 ## CLEAN UP
-### A. Remove duplicates
-1. Select all cells.
 
-2. Data tab -> Remove Duplicates.  
-![alt text](/docs/assets/A-2.png)
+### A. Remove duplicates  
+1. Select all cells.  
+2. **Data tab → Remove Duplicates**  
+   ![alt text](/docs/assets/A-2.png)  
+3. Make sure **‘Select All’** and **‘My data has headers’** are checked, then click **OK**.  
+   ![alt text](/docs/assets/A-3-1.png)  
+   ![alt text](/docs/assets/A-3-2.png)
 
-3. Ensure 'Select All' and 'My data has headers' is selected, then click 'OK'.  
-![alt text](/docs/assets/A-3-1.png)  
-![alt text](/docs/assets/A-3-2.png)
+### B. Clarify columns  
+1. Select the column (no header), press **Ctrl+H**.  
+2. Set up Find & Replace as needed.  
+   ![alt text](/docs/assets/B-2.png)
 
-### B. Clarify columns
-1. Select entire column, excluding the header. Ctrl-H to pull up "Find and Replace".
+### C. Format numbers  
+1. Select the column.  
+2. **Home tab → Format → Number**  
+   ![alt text](/docs/assets/C-2.png)  
+3. Remove any leftover 0s.  
+   ![alt text](/docs/assets/C-3.png)
 
-2. Ensure settings match below. Continue for any other columns.  
-![alt text](/docs/assets/B-2.png)
+### D. Catch typos  
+1. **Home → Sort & Filter → Filter**  
+   ![alt text](/docs/assets/D-1.png)  
+2. Use filter arrows to review unique values in each column.  
+   ![alt text](/docs/assets/D-2.png)
 
-### C. Convert all numeric values to 'Number' format.
-- Not always necessary, but good practice.  
-1. Select entire column.
+### E. Clean up Commute Distance  
+1. **Ctrl+H**  
+   - **Find:** ` Miles`  
+   - **Replace:** *(leave blank)*  
+   - Limit to Commute Distance column.
 
-2. Home tab -> Change General to Number  
-![alt text](/docs/assets/C-2.png)
+### F. Bucket Age into ranges  
+1. Add a new column after **Age**, name it **Age Brackets**.  
+2. Paste into first cell (below header):  
+   ```excel
+   =IF(L2>54,"Old", IF(L2>30,"Middle Age", IF(L2<=30,"Adolescent","Invalid")))
+   ```  
+3. Double-click the fill handle.  
+   ![alt text](/docs/assets/F-3.png)
 
-3. Remove remaining 0s.  
-![alt text](/docs/assets/C-3.png)
+---
 
-### D. Check for spelling errors or other data entry mistakes.
-1. Home tab -> Sort and Filter -> Filter.  
-- This brings up arrows to see all possible entries in each column.  
-![alt text](/docs/assets/D-1.png)
+## DASHBOARD (Pivot Tables + Charts)
 
-2. Press the arrow for each column to check each entry.  
-![alt text](/docs/assets/D-2.png)
+1. Create a new sheet called **Dashboard**. This is where *everything* goes.
 
-### E. Get rid of 'Miles' in Commute Distance
-1. Use Find & Replace (Ctrl-H)  
-- Find: ` Miles`  
-- Replace: *(leave blank)*  
-- Make sure to only affect the column for Commute Distance.
+### 1 - Avg Income by Gender + Purchase Status  
+#### Pivot Table  
+1. Insert → Pivot Table → Select entire dataset  
+2. **Rows:** Gender  
+   **Columns:** Purchased Bike  
+   **Values:** Income → Set to **Average**  
+   ![alt text](/docs/assets/PT-avg-income-1.png)  
+   ![alt text](/docs/assets/PT-avg-income-2.png)  
+   ![alt text](/docs/assets/PT-avg-income-3.png)
 
-### F. Convert Age to age ranges
-- Too many individual ages can lead to cluttered visualizations.  
-![alt text](/docs/assets/F-0.png)
-
-1. Add new column after 'Age'. Name it 'Age Brackets'.
-
-2. Click first cell in column, excluding the header. Add code below.
-
-```
-=IF(L2>54,"Old", IF(L2>30,"Middle Age", IF(L2<=30,"Adolescent","Invalid")))
-```
-
-- Explanation: Categorizes ages into 3 buckets.
-
-3. Double click the fill handle (the small square at the bottom-right corner of a selected cell) to auto-fill the rest of the column.  
-![alt text](/docs/assets/F-3.png)
-
-## PIVOT TABLES & VISUALIZATIONS
-- How visualizations are created
-
-1. Create new sheet called 'Pivot Table'.
-
-2. Select a cell. Go to Insert -> Pivot Table.
-
-3. Go to 'bike_buyers'. Ctrl-A to select entire table. Click OK.  
-![alt text](/docs/assets/PT-setup-3.png)
-
-Should look something like this:  
-![alt text](/docs/assets/PT-setup-3-2.png)
-
-### 1 - AVG Income
-#### PIVOT TABLE
-1. Select Gender + Income
-
-2. PivotTable Fields -> Values -> Value Field Settings. Click 'Average'.  
-![alt text](/docs/assets/PT-avg-income-1.png)  
-![alt text](/docs/assets/PT-avg-income-2.png)
-
-3. Drag 'Purchased Bike' to Columns section.
-
-Finished Product:  
-![alt text](/docs/assets/PT-avg-income-3.png)
-
-#### VISUALIZATION
-1. Click a row in the table. Insert Tab -> Bar graph (clustered column).  
-![alt text](/docs/assets/Visual-avg-income-1.png)
-
-2. Double click to bring up 'Chart' bar.
-
-3. Turn on 'Axis Title' in both Horizontal and Vertical Axis.  
-- Horizontal Axis Title: Gender  
-- Vertical Axis Title: Income  
-![alt text](/docs/assets/Visual-avg-income-2.png)
-
-4. Set Chart Title.  
-- Avg Income Per Gender & Salary
-
-5. Add commas to table (looks nicer).  
-- Select all rows with numbers.  
-- Home Tab: Change from Number -> Accounting.  
-- Decrease decimal places to 0.  
-- Click off table to apply results to graph.  
-![alt text](/docs/assets/Visual-avg-income-3.png)
+#### Chart  
+1. Click table → Insert → **Clustered Column Chart**  
+   ![alt text](/docs/assets/Visual-avg-income-1.png)  
+2. Enable **Axis Titles**:  
+   - Horizontal: Gender  
+   - Vertical: Income  
+   ![alt text](/docs/assets/Visual-avg-income-2.png)  
+3. Title: `Avg Income by Gender & Purchase Status`  
+4. Format income numbers:  
+   - Select them → Format: **Accounting**, 0 decimals  
+   - This also updates the graph  
+   ![alt text](/docs/assets/Visual-avg-income-3.png)
 
 ### 2 - Commute Distance  
-![alt text](/docs/assets/Visual-commute-1.png)  
-- Problem: formatting of '10+' miles doesn't match the others → can't list distances in order  
-- Temporary Fix:  
-  - Go to original sheet. Rename all instances of "10+ Miles" to "More Than 10 Miles".  
-  - Data Tab -> Refresh All  
-![alt text](/docs/assets/Visual-commute-2.png)  
-- Chart Type: Line with markers
+1. Insert Pivot Table:  
+   - **Rows:** Commute Distance  
+   - **Values:** Count of any field (e.g., ID or Email)  
+2. If "10+ Miles" exists, rename to `"More Than 10 Miles"` in the original dataset.  
+   ![alt text](/docs/assets/Visual-commute-1.png)  
+3. Refresh Pivot Table → Insert **Line Chart with Markers**  
+   ![alt text](/docs/assets/Visual-commute-2.png)
 
-### 3 - Age Bracket  
-![alt text](/docs/assets/Visual-age-1.png)  
-![alt text](/docs/assets/Visual-age-2.png)  
-- Chart Type: Line with markers
+### 3 - Age Brackets  
+1. Insert Pivot Table:  
+   - **Rows:** Age Brackets  
+   - **Values:** Count  
+2. Insert **Line Chart with Markers**  
+   ![alt text](/docs/assets/Visual-age-1.png)  
+   ![alt text](/docs/assets/Visual-age-2.png)
 
-## DASHBOARD
+---
+
+## LAYOUT AND POLISH
+
+1. **Hide Pivot Tables**  
+   - Present in the 'AA' column.
+
+2. **Remove gridlines**  
+   - Ctrl+A → **View tab → Uncheck Gridlines**
+
+3. **Add Dashboard Title**  
+   - Select cells at the top → Fill with color  
+   - **Merge & Center** → Type your dashboard name  
+   ![alt text](/docs/assets/Dashboard-3.png)  
+   ![alt text](/docs/assets/Dashboard-3-2.png)
+
+4. **Arrange visuals**  
+   - Manually align charts (multi-select doesn’t work well in Web).  
+   - Reference:  
+     - [Align or arrange objects](https://support.microsoft.com/en-us/office/align-or-arrange-objects-bfd91078-2078-4b35-8672-f6270690b3b8#id0ebbf=web)  
+     - [Customize keyboard shortcuts](https://support.microsoft.com/en-us/office/customize-keyboard-shortcuts-9a92343e-a781-4d5a-92f1-0f32e3ba5b4d)
+
+5. **Slicers (Optional)**  
+  - Select a table. Insert Tab -> Slicer.
+    - Pick Marital Status, Region, Education.
+  - Let slicers affect all graphs.
+    - Double click the slicer. 
+    - Slicer Settings -> PivotTable connections -> Select all.
+      ![alt text](/docs/assets/Dashboard-5.png)
+        - Ignore the 'Pivot Table' sheet. I had to start over but I kept the sheet so you'd know what it'd look like if the pivot tables were made on Desktop.
+
+## FINISHED PRODUCT
+![alt text](/docs/assets/finished-product.png)
