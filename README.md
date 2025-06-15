@@ -1,5 +1,5 @@
 Dashboard
-![alt text](/docs/assets/finished-product.png)
+![Dashboard & Slicers Demo](/docs/assets/demo.gif)
 
 Who bought bikes and who didn't? What made the difference?
 
