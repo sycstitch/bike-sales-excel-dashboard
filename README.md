@@ -12,6 +12,7 @@ Who bought bikes and who didn't? What specific factors made the difference in pu
 ## Dashboard in Action
 Here's a look at the dashboard in action. I had to restart this entire project at one point because Excel Web decided slicers from graphs were a no-go, and copying pivot tables between sheets was a pipe dream. The workaround involved placing all pivot tables and visuals on the same sheet.
 ![Dashboard & Slicers Demo](/docs/assets/demo.gif)
+![Pivot Tables](/docs/assets/pivot_tables.png)
 
 ## Tech Stack
 - Microsoft Excel: Utilized Excel Web for dashboard development and data analysis.
