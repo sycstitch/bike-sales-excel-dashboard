@@ -1,5 +1,6 @@
 <details>
 <summary><b>Problem:</b> Pivot Table shows '###' in some cells.</summary>
+<br /><br />
 
 **Solutions:**
 
@@ -13,6 +14,7 @@
 
 <details>
 <summary><b>Problem:</b> "The PivotTable field name is not valid. To create a PivotTable report, you must use data that is organized as a list with labeled columns. If you are changing the name of a PivotTable field, you must type a new name for the field."</summary>
+<br /><br />
 
 **Solution:**  
 Only select the columns with headers.
@@ -27,6 +29,7 @@ Only select the columns with headers.
 
 <details>
 <summary><b>Problem:</b> Local branch and remote <code>main</code> diverged after editing <code>README.md</code> directly on GitHub without pushing local changes first. Needed to keep local changes except for <code>README.md</code>, which should match remote.</summary>
+<br /><br />
 
 **Solution:**
 
