@@ -101,21 +101,25 @@
    - Present in the 'AA' column.
 
 2. **Remove gridlines**  
-   - Ctrl+A → **View tab → Uncheck Gridlines**
+   - Sheet Background: Ctrl+A → **View tab → Uncheck Gridlines**
+   - Graphs: Click on the lines, and under Vertical Axis, uncheck 'Major Gridlines'.
 
-3. **Add Dashboard Title**  
+3. **Add Labels to graphs**
+  - Double click or right click on an element to add data labels, customize text, and move data labels.
+
+4. **Add Dashboard Title**  
    - Select cells at the top → Fill with color  
    - **Merge & Center** → Type your dashboard name  
    ![alt text](/docs/assets/Dashboard-3.png)  
    ![alt text](/docs/assets/Dashboard-3-2.png)
 
-4. **Arrange visuals**  
+5. **Arrange visuals**  
    - Manually align charts (multi-select doesn’t work well in Web).  
    - Reference:  
      - [Align or arrange objects](https://support.microsoft.com/en-us/office/align-or-arrange-objects-bfd91078-2078-4b35-8672-f6270690b3b8#id0ebbf=web)  
      - [Customize keyboard shortcuts](https://support.microsoft.com/en-us/office/customize-keyboard-shortcuts-9a92343e-a781-4d5a-92f1-0f32e3ba5b4d)
 
-5. **Slicers (Optional)**  
+6. **Slicers (Optional)**  
   - Select a table. Insert Tab -> Slicer.
     - Pick Marital Status, Region, Education.
   - Let slicers affect all graphs.
