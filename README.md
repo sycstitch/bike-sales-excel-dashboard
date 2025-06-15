@@ -30,7 +30,7 @@ Here's a look at the dashboard in action. I had to restart this entire project a
 ## Quick Start
 1. See the dashboard in action: Check out demo.gif above
 2. Follow the process: Open [Steps-Web.md](docs/Steps-Web.md) for the complete walkthrough
-3. Compare datasets: DatasetDirty.xlsx → DatasetClean.xlsx shows the transformation
+3. Compare datasets: [Dataset-Dirty.xlsx](Dataset-Dirty.xlsx) → [Dataset-Clean.xlsx](Dataset-Clean.xlsx) shows the transformation
 4. Hit a snag? [Troubleshooting.md](docs/Troubleshooting.md) has solutions for common Excel Web issues
 
 ## Project Structure
@@ -52,5 +52,5 @@ For inquiries or professional connections, reach out via my main GitHub profile:
 
 ## Related Projects
 Explore other projects:
-	- [La Liga Management System](https://github.com/sycstitch/la-liga-management-system) (Spanish, SQL, PHP, Front & Backend)
-	- [TrueCar Webscraper & Data Analysis](https://github.com/sycstitch/truecar-webscraper) (ETL, Python, BeautifulSoup, Pandas, Regex)
+- [La Liga Management System](https://github.com/sycstitch/la-liga-management-system) (Spanish, SQL, PHP, Front & Backend)
+- [TrueCar Webscraper & Data Analysis](https://github.com/sycstitch/truecar-webscraper) (ETL, Python, BeautifulSoup, Pandas, Regex)
