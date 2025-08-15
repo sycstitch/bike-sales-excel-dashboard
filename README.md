@@ -1,4 +1,4 @@
-# 🚴‍♀️ Bike Sales (& the Hidden Battle with Excel Web)
+# 🚴‍♀️ Bike Sales (Excel Web)
 This project demonstrates end-to-end data analysis skills using Excel Web — from messy raw data to an interactive dashboard that reveals purchasing patterns.
 
 ## The Big Question:
